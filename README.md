@@ -124,7 +124,7 @@ Schedule and Goals:
 | --------- | --------------------------------------- | ------- |
 | 1/25/2021 | Pitch Idea / Connect to API             | Pending |
 | 1/26/2021 | Begin Coding                            | Pending |
-| 1/27/2021 | Finish basic feature development        | Pending |
+| 1/27/2021 | Finish basic development and deploy     | Pending |
 | 1/28/2021 | test and debug, build advanced features | Pending |
 | 1/29/2021 | submit finalized application            | Pending |
 
@@ -134,13 +134,15 @@ Priority Matrix: [Link to Priority Matrix](https://drive.google.com/file/d/1aHLY
 
 Timeframes: 
 | Component                       | Priority | Estimate Time | Time Invested | Actual Time |
-| ------------------------------- | :------: | ------------: | ------------- | ----------- |
-| Setting Up Basic Layout         | H        | 1 Hr          | TBD           | TBD         |
-| Accessing API                   | H        | 2 Hr          | TBD           | TBD         |
+| ------------------------------- | :------: | :-----------: | :-----------: | :---------: |
+| Setting Up Basic Layout         | H        | 2 Hr          | TBD           | TBD         |
+| Accessing API                   | H        | 3 Hr          | TBD           | TBD         |
+| JS API Coding                   | H        | 3 Hr          | TBD           | TBD         |
 | JS DOM Coding                   | H        | 3 Hr          | TBD           | TBD         |
-| Additional Features Programming | M        | 3 Hr          | TBD           | TBD         |
+| Link to External SportsBooks    | M        | 3 Hr          | TBD           | TBD         |
+| Clear Screen/Reset Page         | M        | 3 Hr          | TBD           | TBD         |
 | CSS Coding                      | H        | 3 Hr          | TBD           | TBD         |
 | Testing/Debug                   | H        | 3 Hr          | TBD           | TBD         |
-| Hosting Final Product           | M        | 2 Hr          | TBD           | TBD         |
+| Hosting Final Product           | M        | 3 Hr          | TBD           | TBD         |
 | Total Times                     |          |               |               |             |
 
