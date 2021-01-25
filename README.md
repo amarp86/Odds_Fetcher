@@ -141,3 +141,10 @@ Timeframes:
 |CSS Coding| H | 3 Hr | TBD | TBD |
 |Testing/Debug| H | 3 Hr | TBD | TBD |
 |Hosting Final Product| M | 2 Hr | TBD | TBD|
+
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
