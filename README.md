@@ -107,7 +107,7 @@ Wireframes: [Link to Wireframe](https://wireframe.cc/SXndMc)
 
 MVP: 
 1. Establish Connection to API with axios
-2. Allow User to select a sports league (NBA, NCAAB, NFL, et..)
+2. Allow User to select a sports league (NBA, NCAAB, NFL, etc..)
 3. Allow user to select a team within selected league (NY Knicks, Penn State Nittany Lions, Kansas City Chiefs, etc)
 4. Append DOM to display current realtime bettings odds and other necessary game data to make informed wager.
 5. Manipulate DOM with CSS to display information in a presentable manner.
@@ -122,11 +122,12 @@ Post-MVP:
 Schedule and Goals: 
 | Date      |Goal of the Day                          | Status  |
 | --------- | --------------------------------------- | ------- |
-| 1/25/2021 | Pitch Idea / Connect to API             | Pending |
-| 1/26/2021 | Begin Coding                            | Pending |
-| 1/27/2021 | Finish basic development and deploy     | Pending |
-| 1/28/2021 | test and debug, build advanced features | Pending |
-| 1/29/2021 | submit finalized application            | Pending |
+| 1/25/2021 | Prompt/Wireframe                        | Pending |
+| 1/26/2021 | Approval/Begin Coding                   | Pending |
+| 1/27/2021 | Core App Structure                      | Pending |
+| 1/28/2021 | Initial Deployment                      | Pending |
+| 1/29/2021 | Meet MVP Deliverables                   | Pending |
+| 2/1/2021  | Presentations/Submission                | Pending |
 
 
 Priority Matrix: [Link to Priority Matrix](https://drive.google.com/file/d/1aHLY0D2mn84Lf4sIha2IFY4x1S0DP90Z/view?usp=sharing)
@@ -137,12 +138,16 @@ Timeframes:
 | ------------------------------- | :------: | :-----------: | :-----------: | :---------: |
 | Setting Up Basic Layout         | H        | 2 Hr          | TBD           | TBD         |
 | Accessing API                   | H        | 3 Hr          | TBD           | TBD         |
-| JS API Coding                   | H        | 3 Hr          | TBD           | TBD         |
-| JS DOM Coding                   | H        | 3 Hr          | TBD           | TBD         |
+| Parsing API Data                | H        | 3 Hr          | TBD           | TBD         |
+| JS API Get Request              | H        | 3 Hr          | TBD           | TBD         |
+| JS DOM Data Appends             | H        | 3 Hr          | TBD           | TBD         |
+| JS DOM Image Appends            | H        | 3 Hr          | TBD           | TBD         |
 | Link to External SportsBooks    | M        | 3 Hr          | TBD           | TBD         |
 | Clear Screen/Reset Page         | M        | 3 Hr          | TBD           | TBD         |
-| CSS Coding                      | H        | 3 Hr          | TBD           | TBD         |
-| Testing/Debug                   | H        | 3 Hr          | TBD           | TBD         |
+| CSS Styling DESKTOP             | H        | 3 Hr          | TBD           | TBD         |
+| CSS Styling MOBILE              | H        | 3 Hr          | TBD           | TBD         |
+| Testing API call(s)             | H        | 3 Hr          | TBD           | TBD         |
+| Testing CSS breakpoints         | M        | 2 Hr          | TBD           | TBD         |
 | Hosting Final Product           | M        | 3 Hr          | TBD           | TBD         |
-| Total Times                     |          |               |               |             |
+| Total Time                      |          | 37 Hrs        |               |             |
 
