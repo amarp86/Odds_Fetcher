@@ -120,12 +120,12 @@ Post-MVP:
 
 
 Schedule and Goals: 
-|Date|Goal of the Day|Status|
-|1/25/2021 | Succesfully Pitch Idea to Squad Leader and establish connection to API | Pending |
-| 1/26/2021 | Begin Coding | Pending |
-| 1/27/2021 | Finish basic feature development | Pending |
+| Date      |Goal of the Day                          | Status  |
+| 1/25/2021 | Pitch Idea / Connect to API             | Pending |
+| 1/26/2021 | Begin Coding                            | Pending |
+| 1/27/2021 | Finish basic feature development        | Pending |
 | 1/28/2021 | test and debug, build advanced features | Pending |
-| 1/29/2021 | submit finalized application | Pending |
+| 1/29/2021 | submit finalized application            | Pending |
 
 
 Priority Matrix: [Link to Priority Matrix](https://drive.google.com/file/d/1aHLY0D2mn84Lf4sIha2IFY4x1S0DP90Z/view?usp=sharing)
@@ -141,10 +141,5 @@ Timeframes:
 | CSS Coding                      | H        | 3 Hr          | TBD           | TBD         |
 | Testing/Debug                   | H        | 3 Hr          | TBD           | TBD         |
 | Hosting Final Product           | M        | 2 Hr          | TBD           | TBD         |
+| Total Times                     |          |               |               |             |
 
-
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
