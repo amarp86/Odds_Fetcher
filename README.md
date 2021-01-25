@@ -121,6 +121,7 @@ Post-MVP:
 
 Schedule and Goals: 
 | Date      |Goal of the Day                          | Status  |
+| --------- | --------------------------------------- | ------- |
 | 1/25/2021 | Pitch Idea / Connect to API             | Pending |
 | 1/26/2021 | Begin Coding                            | Pending |
 | 1/27/2021 | Finish basic feature development        | Pending |
