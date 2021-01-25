@@ -132,15 +132,15 @@ Priority Matrix: [Link to Priority Matrix](https://drive.google.com/file/d/1aHLY
 
 
 Timeframes: 
-| Component | Priority | Estimate Time | Time Invested | Actual Time |
-| ----------------------------- | :-----------: | ----------- | ------------ |
-| Setting Up Basic Layout | H | 1 Hr | TBD | TBD |
-| Accessing API | H | 2 Hr | TBD | TBD |
-| JS DOM Coding |  H | 3 Hr | TBD | TBD |
-| Additional Features Programming | M | 3 Hr | TBD | TBD |
-| CSS Coding | H | 3 Hr | TBD | TBD |
-| Testing/Debug | H | 3 Hr | TBD | TBD |
-| Hosting Final Product | M | 2 Hr | TBD | TBD |
+| Component                       | Priority | Estimate Time | Time Invested | Actual Time |
+| ------------------------------- | :------: | ------------: | ------------- | ----------- |
+| Setting Up Basic Layout         | H        | 1 Hr          | TBD           | TBD         |
+| Accessing API                   | H        | 2 Hr          | TBD           | TBD         |
+| JS DOM Coding                   | H        | 3 Hr          | TBD           | TBD         |
+| Additional Features Programming | M        | 3 Hr          | TBD           | TBD         |
+| CSS Coding                      | H        | 3 Hr          | TBD           | TBD         |
+| Testing/Debug                   | H        | 3 Hr          | TBD           | TBD         |
+| Hosting Final Product           | M        | 2 Hr          | TBD           | TBD         |
 
 
 | Tables        | Are           | Cool  |
