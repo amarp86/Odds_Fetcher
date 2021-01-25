@@ -133,7 +133,6 @@ Schedule and Goals:
 
 Priority Matrix: [Link to Priority Matrix](https://drive.google.com/file/d/1h6b-Pgw7N-GC2XifGAZZEinY6ZF-N-Ef/view?usp=sharing)
 
-![priority matrix](https://drive.google.com/file/d/1h6b-Pgw7N-GC2XifGAZZEinY6ZF-N-Ef/view?usp=sharing)
 
 
 Timeframes: 
