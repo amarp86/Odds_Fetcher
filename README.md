@@ -1,4 +1,4 @@
-# App Title: Wanna_Bet_Odds_fetcher
+# App Title: Wanna_Bet_Odds_Fetcher
 
 
 App Description: Web App will fetch current sports bettings odds for upcoming matches per league chosen by user.
@@ -133,6 +133,7 @@ Priority Matrix: [Link to Priority Matrix](https://drive.google.com/file/d/1aHLY
 
 Timeframes: 
 |Component| Priority | Estimate Time | Time Invested | Actual Time |
+|-----------------------------|:-----------:|-----------|------------|
 |Setting Up Basic Layout| H | 1 Hr | TBD | TBD |
 |Accessing API| H | 2 Hr | TBD | TBD |
 |JS DOM Coding| H | 3 Hr | TBD | TBD |
