@@ -120,7 +120,7 @@ Post-MVP:
 
 
 Schedule and Goals: 
-| Date      |Goal of the Day                          | Status  |
+| Date      |            Goal of the Day              |  Status |
 | --------- | --------------------------------------- | ------- |
 | 1/25/2021 | Prompt/Wireframe                        | Pending |
 | 1/26/2021 | Approval/Begin Coding                   | Pending |
@@ -138,16 +138,17 @@ Timeframes:
 | ------------------------------- | :------: | :-----------: | :-----------: | :---------: |
 | Setting Up Basic Layout         | H        | 2 Hr          | TBD           | TBD         |
 | Accessing API                   | H        | 3 Hr          | TBD           | TBD         |
+| JS API Initial Get Request      | H        | 3 Hr          | TBD           | TBD         |
 | Parsing API Data                | H        | 3 Hr          | TBD           | TBD         |
-| JS API Get Request              | H        | 3 Hr          | TBD           | TBD         |
+| Creating HTML Elements          | H        | 3 Hr          | TBD           | TBD         |
 | JS DOM Data Appends             | H        | 3 Hr          | TBD           | TBD         |
 | JS DOM Image Appends            | H        | 3 Hr          | TBD           | TBD         |
-| Link to External SportsBooks    | M        | 3 Hr          | TBD           | TBD         |
 | Clear Screen/Reset Page         | M        | 3 Hr          | TBD           | TBD         |
 | CSS Styling DESKTOP             | H        | 3 Hr          | TBD           | TBD         |
 | CSS Styling MOBILE              | H        | 3 Hr          | TBD           | TBD         |
+| POST MVP - External Links       | L        | 3 Hr          | TBD           | TBD         |
 | Testing API call(s)             | H        | 3 Hr          | TBD           | TBD         |
 | Testing CSS breakpoints         | M        | 2 Hr          | TBD           | TBD         |
 | Hosting Final Product           | M        | 3 Hr          | TBD           | TBD         |
-| Total Time                      |          | 37 Hrs        |               |             |
+| Total Time                      |          | 40 Hrs        |               |             |
 
