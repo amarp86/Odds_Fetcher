@@ -117,6 +117,7 @@ MVP:
 Post-MVP: 
 1. Append DOM to link externally to sportsbooks allowing wagers on current matchup that are within API
 2. Make second API call to fetch previous results based on odds and display "previous outcomes"
+3. Use JS to find sportsbook with BEST ODDS for selected Match-Up
 
 
 Schedule and Goals: 
@@ -130,7 +131,7 @@ Schedule and Goals:
 | 2/1/2021  | Presentations/Submission                | Pending |
 
 
-Priority Matrix: [Link to Priority Matrix](https://drive.google.com/file/d/1aHLY0D2mn84Lf4sIha2IFY4x1S0DP90Z/view?usp=sharing)
+Priority Matrix: [Link to Priority Matrix](https://drive.google.com/file/d/1h6b-Pgw7N-GC2XifGAZZEinY6ZF-N-Ef/view?usp=sharing)
 
 
 Timeframes: 
