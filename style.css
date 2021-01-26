@@ -1,0 +1,57 @@
+body {
+  background-color: darksalmon;
+}
+
+#title {
+  text-align: center;
+}
+#subtitle {
+  text-align: center;
+}
+button:hover {
+  background-color: darkslateblue;
+}
+
+form {
+  padding: 5px;
+}
+
+.teams-playing {
+  text-align: center;
+}
+
+#append-odds {
+  text-align: center;
+  border: 2px dotted black;
+  padding: 5px;
+}
+
+.away-odds {
+  border-radius: 200px;
+  margin: auto;
+  max-width: 30%;
+  background-color: red;
+  padding: 3px;
+  margin: 3px;
+}
+
+.home-odds {
+  border-radius: 200px;
+  margin: auto;
+  max-width: 30%;
+  background-color: green;
+  padding: 3px;
+  margin: 3px;
+}
+.draw-odds {
+  border-radius: 200px;
+  margin: auto;
+  max-width: 30%;
+  background-color: royalblue;
+  padding: 3px;
+  margin: 3px;
+}
+
+.booknames {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}

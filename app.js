@@ -59,12 +59,12 @@ let teamButton = document.querySelector('#button-team')
 teamButton.addEventListener('click', async (e) => {
   e.preventDefault()
   let value = document.querySelector('#league-list').value
-  let allData = await axios.get(`https://api.the-odds-api.com/v3/odds/?apiKey=a141a74c096f26f5baeb764d9b7047c3&sport=${value}&region=us&oddsFormat=american`)
+  let allData = await axios.get(`https://api.the-odds-api.com/v3/odds/?apiKey=a141a74c096f26f5baeb764d9b7047c3&sport=${value}&region=us&oddsFormat=american&mkt=h2h`)
 
  
   let getSelectedGameValue = document.querySelector("#team-list").value
 
-  console.log("getselectedValue: " + getSelectedGameValue)
+  //console.log("getselectedValue: " + getSelectedGameValue)
   let dataPoints = allData.data.data
   // console.log(dataPoints)
   // console.log(dataPoints[0].teams[0]) // first home team name
@@ -80,19 +80,41 @@ teamButton.addEventListener('click', async (e) => {
     // console.log(game.home_team)
     // console.log(game.sites)
 
-    if (getSelectedGameValue === game.teams.toString()){
+    if (getSelectedGameValue === game.teams.toString()) {
+      let appendDiv = document.querySelector("#append-odds")
+      let teamsPlaying = document.createElement('h2')
+      let fixedTitle = game.teams.toString().split(",").join(" vs. ")
+      teamsPlaying.textContent = fixedTitle;
+      teamsPlaying.setAttribute("class", "teams-playing")
+      appendDiv.append(teamsPlaying)
+
+
       for (let i = 0; i < game.sites.length; i++) {
-        console.log(game.sites[i].site_nice)
-        console.log(`${game.teams[0]} : `  + game.sites[i].odds.h2h[0])
-        console.log(`${game.teams[1]} : ` + game.sites[i].odds.h2h[1])
+        //console.log(game.sites[i].site_nice)
+        //console.log(`${game.teams[0]} : `  + game.sites[i].odds.h2h[0])
+        //console.log(`${game.teams[1]} : ` + game.sites[i].odds.h2h[1])   ***if h2h[2] exists there is a draw value***
+        
         let homeOdds = document.createElement('div')
-        homeOdds.textContent = game.sites[i].odds.h2h[0];
+        homeOdds.setAttribute("class", "home-odds")
+        homeOdds.textContent = `${game.teams[0]} : ${game.sites[i].odds.h2h[0]}`;
         let awayOdds = document.createElement('div')
-        awayOdds.textContent = game.sites[i].odds.h2h[1];
-        let appendDiv = document.querySelector("#append-odds")
-        appendDiv.append(game.sites[i].site_nice)
+        awayOdds.setAttribute("class", "away-odds")
+        awayOdds.textContent = `${game.teams[1]} : ${game.sites[i].odds.h2h[1]}`;
+        let bookNames = document.createElement('h3')
+        bookNames.setAttribute('class', "booknames")
+        bookNames.textContent = game.sites[i].site_nice;
+        
+        
+        appendDiv.append(bookNames)
         appendDiv.append(homeOdds)
         appendDiv.append(awayOdds)
+        if (game.sites[i].odds.h2h[2]) {
+          let drawOdds = document.createElement('div')
+          drawOdds.setAttribute('class', "draw-odds")
+          drawOdds.textContent = `Draw: ${game.sites[i].odds.h2h[2]}`
+          //console.log(drawOdds)
+          appendDiv.append(drawOdds)
+        }
         
 
 
@@ -102,18 +124,7 @@ teamButton.addEventListener('click', async (e) => {
   }
 )
 
-  for (let i = 0; i < dataPoints.length; i++) {
-    for (let j = 0; j < dataPoints[i].sites.length; j++){
-
-      if (dataPoints[i].teams[j] === getSelectedGameValue) {
-        console.log(dataPoints[i].teams[j])
-        console.log(datapoints[i].teams[j].sites)
-      }
-
-    }
-    
-
-  }
+ 
   
   
   
