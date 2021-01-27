@@ -122,13 +122,9 @@ teamButton.addEventListener('click', async (e) => {
     }
    
   }
+  )
+  }
 )
 
- 
-  
-  
-  
 
-
-} )
 
