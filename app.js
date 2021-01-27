@@ -103,22 +103,7 @@ teamButton.addEventListener('click', async (e) => {
     }
     )
   removeItems();
-  removeButton.addEventListener('click', (e) => {
-    e.preventDefault();
-    let where = document.querySelector("#append-odds")
-    let list1 = document.querySelector("#team-list")
-    while (where.lastChild) {
-      where.removeChild(where.lastChild)
-    }
-    while (list1.lastChild) {
-      list1.removeChild(list1.lastChild)
-    }
-    let defaultOption = document.createElement("option")
-    defaultOption.text = "Select League First"
-    list1.add(defaultOption)
-  }
   
-  )
   }
 )
 
@@ -127,11 +112,27 @@ removeButton.setAttribute("id", "remove-button")
 removeButton.textContent = 'Reset/Remove'
   
 const removeItems = () => {  
-  let where = document.querySelector("#submit-team-form")
+  let where = document.querySelector("#reset-here")
   where.append(removeButton)  
 }
 
+removeButton.addEventListener('click', (e) => {
+  e.preventDefault();
+  let where = document.querySelector("#append-odds")
+  let list1 = document.querySelector("#team-list")
+  while (where.lastChild) {
+    where.removeChild(where.lastChild)
+  }
+  while (list1.lastChild) {
+    list1.removeChild(list1.lastChild)
+  }
+  let defaultOption = document.createElement("option")
+  defaultOption.text = "Select League First"
+  list1.add(defaultOption)
+ 
+}
 
+)
 
 
 

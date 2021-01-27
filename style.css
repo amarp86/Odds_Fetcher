@@ -7,27 +7,38 @@ body {
 }
 @keyframes title {
   from {
-    margin-right: 0%;
+    margin-right: 100%;
     color: yellow;
   }
   to {
-    margin-right: 10%;
+    margin-right: 0%;
     color: dimgray;
   }
 }
 #title-span {
   display: flex;
   flex-direction: wrap;
+  margin-bottom: 10px;
 }
 #title {
   font-size: 40pt;
   text-align: right;
   animation-name: title;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
   /* transform: rotateY(230deg); */
 }
-
+#form-div {
+  display: inline-block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: auto;
+}
+#reset-here {
+  margin-left: 50%;
+  margin-right: 50%;
+}
 #subtitle {
   text-align: center;
 }
@@ -40,10 +51,16 @@ button:hover {
   color: white;
 }
 #remove-button {
+  display: inline-flex;
   min-height: 20%;
 }
 
 form {
+  max-width: auto;
+  text-align: center;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
   padding: 5px;
 }
 
@@ -74,6 +91,15 @@ form {
 }
 
 @keyframes home-odds-slider {
+  from {
+    margin-left: 100%;
+  }
+  to {
+    margin-left: 35%;
+  }
+}
+
+@keyframes draw-odds-slider {
   from {
     margin-left: 100%;
   }
@@ -113,6 +139,10 @@ form {
   max-width: 30%;
   background-color: royalblue;
   padding: 3px;
+
+  animation-name: draw-odds-slider;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
 }
 
 .booknames {
@@ -121,14 +151,20 @@ form {
 
 #team-list {
   max-width: 45%;
-  min-width: 30%;
+  min-width: 45%;
 }
 #league-list {
   max-width: 45%;
-  min-width: 30%;
+  min-width: 45%;
 }
 
-#form-div {
+footer {
+  padding-top: 25px;
+  margin-top: 20px;
+  font-size: 15pt;
+  position: relative;
+  bottom: 0;
+  text-align: center;
 }
 
 @media screen and (max-width: 600px) {

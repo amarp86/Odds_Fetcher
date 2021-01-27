@@ -9,10 +9,10 @@
   <script defer src="./app.js"></script>
 </head>
 <body>
-  <span id = "title-span"><img id="site-logo" src="./images/Wanna Bet Logo.png" alt="site-logo">
-  <h1 id= "title">Wanna Bet?</h1></span>
+  <div id = "title-span"><img id="site-logo" src="./images/Wanna Bet Logo.png" alt="site-logo">
+  <h1 id= "title">...Wanna Bet?</h1></div>
   <h2 id= "subtitle">Sports Betting H2H Odds Fetcher</h2>
-
+<div id="form-div">
 <form id = "submit-league-form">
   <select name= "Sports League" id= "league-list">
     <option selected disabled>Select a League First</option>
@@ -28,8 +28,10 @@
 
   <button id = "button-team">Submit Matchup</button>
 </form>
+</div>
 
 <div id="odds-below">Sportsbook Odds Below: See Legend</div>
+<div id= "reset-here"></div>
 <div id = "legend">
 <div class ="home-odds">HOME TEAM</div>
 <div class= "away-odds">AWAY TEAM</div>
@@ -38,7 +40,12 @@
 <!-- <div id ="append-books"></div> -->
 
 
-<footer id = "footer"></footer>
+<footer id = "footer">
+  Powered By: <a href="https://the-odds-api.com/">The Odds API</a> Coded by <a href="https://github.com/amarp86">Amar Patel</a>
+
+</footer>
 
 </body>
+
+
 </html>
