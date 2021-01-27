@@ -1,15 +1,13 @@
 body {
   background-color: darksalmon;
 }
+
+#site-logo {
+  max-height: 150px;
+}
 @keyframes title {
   from {
-    color: black;
-  }
-  to {
     color: red;
-  }
-  from {
-    color: yellow;
   }
   to {
     color: blue;
@@ -19,8 +17,9 @@ body {
   font-size: 40pt;
   text-align: center;
   animation-name: title;
-  animation-duration: 3s;
+  animation-duration: 5s;
   animation-iteration-count: infinite;
+  /* transform: rotateY(230deg); */
 }
 #subtitle {
   text-align: center;
@@ -32,6 +31,9 @@ button {
 button:hover {
   background-color: darkslateblue;
   color: white;
+}
+#remove-button {
+  min-height: 20%;
 }
 
 form {
