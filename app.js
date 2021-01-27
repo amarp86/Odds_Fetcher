@@ -100,21 +100,35 @@ teamButton.addEventListener('click', async (e) => {
         }      }
     }
    
-  }
-  )
-  removeItems();
+    }
+    )
+    removeItems();
   }
 )
 
-
-const removeItems = () => {
-  let removeButton = document.createElement('button')
+let removeButton = document.createElement('button')
   removeButton.setAttribute("id", "remove-button")
   removeButton.textContent = 'Reset/Remove'
+const removeItems = () => {
+  
   let where = document.querySelector("#submit-team-form")
   where.append(removeButton)
+
+  
+}
+removeButton.addEventListener('click', (e) => {
+  e.preventDefault();
+  let where = document.querySelector("#append-odds")
+  let list1 = document.querySelector("#team-list")
+  while (where.lastChild) {
+    where.removeChild(where.lastChild)
+  }
+  while (list1.lastChild) {
+    list1.removeChild(list1.lastChild)
+  }
 }
 
+)
 
 
 
