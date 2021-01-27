@@ -7,21 +7,23 @@ body {
 }
 @keyframes title {
   from {
-    color: red;
+    margin-right: 100%;
+    color: yellow;
   }
   to {
-    color: blue;
+    margin-left: 100%;
+    color: dimgray;
   }
 }
 #title-span {
   display: flex;
-  flex-wrap: unset;
+  flex-direction: wrap;
 }
 #title {
   font-size: 40pt;
   text-align: right;
   animation-name: title;
-  animation-duration: 1s;
+  animation-duration: 3s;
   animation-iteration-count: infinite;
   /* transform: rotateY(230deg); */
 }
@@ -104,6 +106,9 @@ form {
 @media screen and (max-width: 600px) {
   body {
     background-color: seagreen;
+  }
+  #title {
+    font-size: 20pt;
   }
   #site-logo {
     max-width: relative;
