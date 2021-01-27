@@ -1,5 +1,5 @@
-const sportsUrl = `https://api.the-odds-api.com/v3/sports?apiKey=a141a74c096f26f5baeb764d9b7047c3`
-//const oddsUrl = `https://api.the-odds-api.com/v3/odds/?apiKey=a141a74c096f26f5baeb764d9b7047c3&sport=upcoming&region=us``
+const sportsUrl = `https://api.the-odds-api.com/v3/sports?apiKey=69b790cf49d2c856f04114447b46335e`
+//const oddsUrl = `https://api.the-odds-api.com/v3/odds/?apiKey=*INSERT KEY*&sport=upcoming&region=us``
 
 const getSports = async () => {
   try {
@@ -30,7 +30,7 @@ let leagueButton = document.querySelector("#button-league");
 leagueButton.addEventListener('click',  async (e) => {
   e.preventDefault();
   let value = document.querySelector("#league-list").value;
-  let teamsData = await axios.get(`https://api.the-odds-api.com/v3/odds/?apiKey=a141a74c096f26f5baeb764d9b7047c3&sport=${value}&region=us`)
+  let teamsData = await axios.get(`https://api.the-odds-api.com/v3/odds/?apiKey=69b790cf49d2c856f04114447b46335e&sport=${value}&region=us`)
   console.log(teamsData)
   let teamsList = teamsData.data
   
@@ -57,7 +57,7 @@ let teamButton = document.querySelector('#button-team')
 teamButton.addEventListener('click', async (e) => {
   e.preventDefault()
   let value = document.querySelector('#league-list').value
-  let allData = await axios.get(`https://api.the-odds-api.com/v3/odds/?apiKey=a141a74c096f26f5baeb764d9b7047c3&sport=${value}&region=us&oddsFormat=american&mkt=h2h`)
+  let allData = await axios.get(`https://api.the-odds-api.com/v3/odds/?apiKey=69b790cf49d2c856f04114447b46335e&sport=${value}&region=us&oddsFormat=american&mkt=h2h`)
 
  
   let getSelectedGameValue = document.querySelector("#team-list").value
