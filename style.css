@@ -7,11 +7,11 @@ body {
 }
 @keyframes title {
   from {
-    margin-right: 100%;
+    margin-right: 0%;
     color: yellow;
   }
   to {
-    margin-left: 100%;
+    margin-right: 10%;
     color: dimgray;
   }
 }
@@ -55,12 +55,32 @@ form {
   border: 2px dotted black;
   padding: 5px;
 }
+#legend {
+  text-align: center;
+  padding: 5px;
+}
 #append-odds {
   text-align: center;
 
   padding: 5px;
 }
+@keyframes away-odds-slider {
+  from {
+    margin-right: 100%;
+  }
+  to {
+    margin-right: 35%;
+  }
+}
 
+@keyframes home-odds-slider {
+  from {
+    margin-left: 100%;
+  }
+  to {
+    margin-left: 35%;
+  }
+}
 .away-odds {
   border-radius: 200px;
   margin: auto;
@@ -68,6 +88,10 @@ form {
   max-width: 30%;
   background-color: red;
   padding: 3px;
+
+  animation-name: away-odds-slider;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
 }
 
 .home-odds {
@@ -77,6 +101,10 @@ form {
   max-width: 30%;
   background-color: green;
   padding: 3px;
+
+  animation-name: home-odds-slider;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
 }
 .draw-odds {
   border-radius: 200px;
