@@ -112,7 +112,7 @@ removeButton.setAttribute("id", "remove-button")
 removeButton.textContent = 'Reset/Remove'
   
 const removeItems = () => {  
-  let where = document.querySelector("#reset-here")
+  let where = document.querySelector("#submit-team-form")
   where.append(removeButton)  
 }
 

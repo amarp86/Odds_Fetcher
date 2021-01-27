@@ -28,17 +28,24 @@ body {
   animation-iteration-count: 1;
   /* transform: rotateY(230deg); */
 }
-#form-div {
+/* #form-div {
   display: inline-block;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
   max-width: auto;
+} */
+#submit-team-form {
+  width: 50%;
 }
-#reset-here {
+#submit-league-form {
+  display: inline-block;
+  width: 50%;
+}
+/* #reset-here {
   margin-left: 50%;
   margin-right: 50%;
-}
+} */
 #subtitle {
   text-align: center;
 }
@@ -51,26 +58,27 @@ button:hover {
   color: white;
 }
 #remove-button {
-  display: inline-flex;
-  min-height: 20%;
+  text-align: center;
+  /* min-height: 20%; */
 }
 
-form {
+/* form {
   max-width: auto;
   text-align: center;
   display: inline-block;
   margin-left: auto;
   margin-right: auto;
   padding: 5px;
-}
+} */
 
 .teams-playing {
   text-align: center;
 }
 #odds-below {
   text-align: center;
-  border: 2px dotted black;
+  border: 2px dotted yellow;
   padding: 5px;
+  margin: 5px;
 }
 #legend {
   text-align: center;
