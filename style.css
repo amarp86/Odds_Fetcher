@@ -48,10 +48,14 @@ form {
 .teams-playing {
   text-align: center;
 }
-
-#append-odds {
+#odds-below {
   text-align: center;
   border: 2px dotted black;
+  padding: 5px;
+}
+#append-odds {
+  text-align: center;
+
   padding: 5px;
 }
 

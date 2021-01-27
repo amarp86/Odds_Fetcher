@@ -49,7 +49,7 @@ const getTeamsOptions = (list) => {
     let option = document.createElement('option')
     option.value = team.teams
     
-    option.textContent = team.teams
+    option.textContent = team.teams.toString().split(",").join(" vs. ")
    
     teamsOptions.append(option)
   })
@@ -107,14 +107,12 @@ teamButton.addEventListener('click', async (e) => {
 )
 
 let removeButton = document.createElement('button')
-  removeButton.setAttribute("id", "remove-button")
-  removeButton.textContent = 'Reset/Remove'
-const removeItems = () => {
+removeButton.setAttribute("id", "remove-button")
+removeButton.textContent = 'Reset/Remove'
   
+const removeItems = () => {  
   let where = document.querySelector("#submit-team-form")
-  where.append(removeButton)
-
-  
+  where.append(removeButton)  
 }
 removeButton.addEventListener('click', (e) => {
   e.preventDefault();
@@ -126,6 +124,9 @@ removeButton.addEventListener('click', (e) => {
   while (list1.lastChild) {
     list1.removeChild(list1.lastChild)
   }
+  let defaultOption = document.createElement("option")
+  defaultOption.text = "Select League First"
+  list1.add(defaultOption)
 }
 
 )
