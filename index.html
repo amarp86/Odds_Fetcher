@@ -11,21 +11,28 @@
 <body>
   <span id = "title-span"><img id="site-logo" src="./images/Wanna Bet Logo.png" alt="site-logo">
   <h1 id= "title">Wanna Bet?</h1></span>
-  <h2 id= "subtitle">Sports Betting Odds Fetcher</h2>
+  <h2 id= "subtitle">Sports Betting H2H Odds Fetcher</h2>
 
 <form id = "submit-league-form">
   <select name= "Sports League" id= "league-list">
     <option selected disabled>Select a League First</option>
   </select>
   <button id = "button-league">Submit League</button>
+  
 </form>
 <form id = "submit-team-form">
+  <div id='form-div'>
   <select name= "Team" id="team-list">
     <option selected disabled>Then Select a Matchup</option>
   </select>
+</div>
   <button id = "button-team">Submit Matchup</button>
 </form>
+
 <div id="odds-below">Sportsbook Odds Below:</div>
+<div class ="home-odds">HOME TEAM</div>
+<div class= "away-odds">AWAY TEAM</div>
+<div class='draw-odds'>DRAW (if available)</div>
 <div id ="append-odds"></div>
 <div id ="append-books"></div>
 

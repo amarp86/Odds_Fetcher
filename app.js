@@ -1,8 +1,6 @@
 const sportsUrl = `https://api.the-odds-api.com/v3/sports?apiKey=a141a74c096f26f5baeb764d9b7047c3`
 //const oddsUrl = `https://api.the-odds-api.com/v3/odds/?apiKey=a141a74c096f26f5baeb764d9b7047c3&sport=upcoming&region=us``
 
-
-
 const getSports = async () => {
   try {
     let sportsData = await axios.get(sportsUrl)
@@ -33,7 +31,7 @@ leagueButton.addEventListener('click',  async (e) => {
   e.preventDefault();
   let value = document.querySelector("#league-list").value;
   let teamsData = await axios.get(`https://api.the-odds-api.com/v3/odds/?apiKey=a141a74c096f26f5baeb764d9b7047c3&sport=${value}&region=us`)
-  
+  console.log(teamsData)
   let teamsList = teamsData.data
   
   getTeamsOptions(teamsList)
@@ -44,8 +42,8 @@ leagueButton.addEventListener('click',  async (e) => {
 
 const getTeamsOptions = (list) => {
   let teamsOptions = document.querySelector("#team-list")
-  list.data.forEach(team => {
-   
+
+  list.data.forEach(team => {   
     let option = document.createElement('option')
     option.value = team.teams
     
@@ -74,6 +72,8 @@ teamButton.addEventListener('click', async (e) => {
       teamsPlaying.textContent = fixedTitle;
       teamsPlaying.setAttribute("class", "teams-playing")
       appendDiv.append(teamsPlaying)
+      let gameTime = game.commence_time;
+      // => 1612740600
 
 
       for (let i = 0; i < game.sites.length; i++) {
@@ -102,7 +102,23 @@ teamButton.addEventListener('click', async (e) => {
    
     }
     )
-    removeItems();
+  removeItems();
+  removeButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    let where = document.querySelector("#append-odds")
+    let list1 = document.querySelector("#team-list")
+    while (where.lastChild) {
+      where.removeChild(where.lastChild)
+    }
+    while (list1.lastChild) {
+      list1.removeChild(list1.lastChild)
+    }
+    let defaultOption = document.createElement("option")
+    defaultOption.text = "Select League First"
+    list1.add(defaultOption)
+  }
+  
+  )
   }
 )
 
@@ -114,22 +130,7 @@ const removeItems = () => {
   let where = document.querySelector("#submit-team-form")
   where.append(removeButton)  
 }
-removeButton.addEventListener('click', (e) => {
-  e.preventDefault();
-  let where = document.querySelector("#append-odds")
-  let list1 = document.querySelector("#team-list")
-  while (where.lastChild) {
-    where.removeChild(where.lastChild)
-  }
-  while (list1.lastChild) {
-    list1.removeChild(list1.lastChild)
-  }
-  let defaultOption = document.createElement("option")
-  defaultOption.text = "Select League First"
-  list1.add(defaultOption)
-}
 
-)
 
 
 
