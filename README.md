@@ -38,18 +38,18 @@ Priority Matrix: [Link to Priority Matrix](https://drive.google.com/file/d/1h6b-
 Timeframes:
 | Component | Priority | Estimate Time | Time Invested | Actual Time |
 | ------------------------------- | :------: | :-----------: | :-----------: | :---------: |
-| Setting Up Basic Layout | H | 2 Hr | 1.5Hr | TBD |
-| Accessing API | H | 3 Hr | 3 Hr | TBD |
-| JS API Initial Get Request | H | 3 Hr | 2 Hr | TBD |
-| Parsing API Data | H | 3 Hr | 3 Hr | TBD |
-| Creating HTML Elements | H | 3 Hr | 2 Hr | TBD |
-| JS DOM Data Appends | H | 3 Hr | 3 Hr | TBD |
-| JS DOM Image Appends | H | 3 Hr | 1 Hr | TBD |
-| Clear Screen/Reset Page | M | 3 Hr | 2 Hr | TBD |
-| CSS Styling DESKTOP | H | 3 Hr | 3 Hr | TBD |
-| CSS Styling MOBILE | H | 3 Hr | 3 Hr | TBD |
-| POST MVP - External Links | L | 3 Hr | TBD | TBD |
-| Testing API call(s) | H | 3 Hr | 2 Hr | TBD |
-| Testing CSS breakpoints | M | 2 Hr | 3 Hr | TBD |
-| Hosting Final Product | M | 3 Hr | 1 Hr | TBD |
-| Total Time | | 40 Hrs | 29.5 Hrs | |
+| Setting Up Basic Layout | H | 2 Hr | 1.5 Hr | 1.5 Hr |
+| Accessing API | H | 3 Hr | 3 Hr | 3 Hr |
+| JS API Initial Get Request | H | 3 Hr | 2 Hr | 2 Hr |
+| Parsing API Data | H | 3 Hr | 3 Hr | 3 Hr |
+| Creating HTML Elements | H | 3 Hr | 2 Hr | 2 Hr |
+| JS DOM Odds Appends | H | 3 Hr | 3 Hr | 3 Hr |
+| JS DOM Teams Appends | H | 3 Hr | 2 Hr | 2 Hr |
+| Clear Screen/Reset Page | M | 3 Hr | 2 Hr | 2 Hr |
+| CSS Styling DESKTOP | H | 3 Hr | 3 Hr | 3 Hr |
+| CSS Styling MOBILE | H | 3 Hr | 3 Hr | 3 Hr |
+| POST MVP - Best Odds | L | 3 Hr | 3 Hr | 3 Hr |
+| Testing API call(s) | H | 3 Hr | 2 Hr | 3 Hr |
+| Testing CSS breakpoints | M | 2 Hr | 3 Hr | 3 Hr |
+| Hosting Final Product | M | 3 Hr | 1 Hr | 3 Hr |
+| Total Time | | 40 Hrs | 33.5 | 33.5 Hr |
