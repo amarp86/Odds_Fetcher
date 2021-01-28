@@ -15,9 +15,7 @@ body {
     color: dimgray;
   }
 }
-#title-span {
-  display: flex;
-  flex-direction: wrap;
+#title-div {
   margin-bottom: 10px;
 }
 #title {
@@ -26,26 +24,8 @@ body {
   animation-name: title;
   animation-duration: 4s;
   animation-iteration-count: 1;
-  /* transform: rotateY(230deg); */
 }
-/* #form-div {
-  display: inline-block;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: auto;
-} */
-#submit-team-form {
-  width: 50%;
-}
-#submit-league-form {
-  display: inline-block;
-  width: 50%;
-}
-/* #reset-here {
-  margin-left: 50%;
-  margin-right: 50%;
-} */
+
 #subtitle {
   text-align: center;
 }
@@ -60,18 +40,7 @@ button:hover {
 }
 #remove-button {
   text-align: center;
-
-  /* min-height: 20%; */
 }
-
-/* form {
-  max-width: auto;
-  text-align: center;
-  display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 5px;
-} */
 
 .teams-playing {
   text-align: center;
@@ -226,12 +195,9 @@ footer {
     border-radius: 200px;
     margin: auto;
     margin-top: 3px;
-    /* min-width: 15%; */
     max-width: 30%;
     background-color: red;
-    /* color: wheat; */
     padding: 3px;
-    /* text-align: center; */
   }
 
   .home-odds {

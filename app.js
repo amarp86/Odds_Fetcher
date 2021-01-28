@@ -124,10 +124,7 @@ teamButton.addEventListener('click', async (e) => {
       awayMin = Math.min(...awayArray)
       drawMax = Math.max(...drawArray)
       drawMin = Math.min(...drawArray)
-      // console.log(homeMax)
-      // console.log(homeMin)
-      // console.log(awayMax)
-      // console.log(awayMin)
+      
 
       let homeMaxDiv = document.createElement('div')
       let awayMaxDiv = document.createElement('div')
