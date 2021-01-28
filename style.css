@@ -87,6 +87,9 @@ button:hover {
   padding: 5px;
 }
 #append-odds {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   text-align: center;
 
   padding: 5px;
@@ -176,6 +179,28 @@ footer {
   bottom: 0;
   text-align: center;
 }
+#append-area-column {
+  display: flex;
+  flex-direction: column-reverse;
+}
+@keyframes best-odds {
+  from {
+    color: black;
+  }
+  to {
+    color: yellow;
+  }
+}
+#append-best-odds {
+  font-family: "Gorditas", cursive;
+  font-size: 20pt;
+  padding: 25px;
+  text-align: center;
+
+  animation-name: best-odds;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
 
 @media screen and (max-width: 600px) {
   body {
@@ -201,12 +226,12 @@ footer {
     border-radius: 200px;
     margin: auto;
     margin-top: 3px;
-    min-width: 15%;
+    /* min-width: 15%; */
     max-width: 30%;
     background-color: red;
-    color: wheat;
+    /* color: wheat; */
     padding: 3px;
-    text-align: center;
+    /* text-align: center; */
   }
 
   .home-odds {
