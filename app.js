@@ -85,10 +85,10 @@ teamButton.addEventListener('click', async (e) => {
       let homeMin = 0;
       let awayMin = 0;
 
-      let switch1 = document.querySelector("#legend-home");
-      switch1.textContent = game.teams[0];
-      let switch2 = document.querySelector('#legend-away');
-      switch2.textContent = game.teams[1];
+      let legend1 = document.querySelector("#legend-home");
+      legend1.textContent = game.teams[0];
+      let legend2 = document.querySelector('#legend-away');
+      legend2.textContent = game.teams[1];
 
 
       for (let i = 0; i < game.sites.length; i++) {
@@ -190,10 +190,12 @@ removeButton.addEventListener('click', (e) => {
   let defaultOption = document.createElement("option")
   defaultOption.text = "Select League First"
   list1.add(defaultOption)
-  let switch1 = document.querySelector("#legend-home");
-  switch1.textContent = "FIRST TEAM"
-  let switch2 = document.querySelector('#legend-away');
-  switch2.textContent = "SECOND TEAM"
+
+
+  let legend1 = document.querySelector("#legend-home");
+  legend1.textContent = "FIRST TEAM"
+  let legend2 = document.querySelector('#legend-away');
+  legend2.textContent = "SECOND TEAM"
  
 }
 
