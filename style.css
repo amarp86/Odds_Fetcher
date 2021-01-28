@@ -173,6 +173,9 @@ footer {
   body {
     background-color: seagreen;
   }
+  button {
+    padding: 3px 3px;
+  }
   #title {
     font-size: 20pt;
   }
