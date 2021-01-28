@@ -104,7 +104,7 @@ teamButton.addEventListener('click', async (e) => {
         bookNames.textContent = game.sites[i].site_nice;
 
         
-          //all odds array to get min/max later
+          //all available odds array to get min/max later
         homeArray.push(game.sites[i].odds.h2h[0])
         awayArray.push(game.sites[i].odds.h2h[1])
         
@@ -133,7 +133,7 @@ teamButton.addEventListener('click', async (e) => {
 
       let homeMaxDiv = document.createElement('div')
       let awayMaxDiv = document.createElement('div')
-      let drawMaxDiv = document.createElement('div')
+      
       
       let bestOddsTitle = document.createElement('p')
       bestOddsTitle.textContent = "Best Odds";
@@ -150,6 +150,7 @@ teamButton.addEventListener('click', async (e) => {
       bestOddsDiv.append(homeMaxDiv)
       bestOddsDiv.append(awayMaxDiv)
       if (drawArray.length > 0) {
+        let drawMaxDiv = document.createElement('div')
         drawMaxDiv.setAttribute('class', 'draw-odds')
         drawMaxDiv.textContent = drawMax;
         bestOddsDiv.append(drawMaxDiv)
