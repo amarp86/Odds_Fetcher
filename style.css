@@ -120,7 +120,7 @@ button:hover {
   margin-top: 3px;
   max-width: 30%;
   background-color: royalblue;
-  padding: 3px;
+  padding: 3px 5px;
 
   animation-name: draw-odds-slider;
   animation-duration: 5s;
