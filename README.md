@@ -25,11 +25,11 @@ Post-MVP:
 Schedule and Goals:
 | Date | Goal of the Day | Status |
 | --------- | --------------------------------------- | ------- |
-| 1/25/2021 | Prompt/Wireframe | Pending |
-| 1/26/2021 | Approval/Begin Coding | Pending |
-| 1/27/2021 | Core App Structure | Pending |
-| 1/28/2021 | Initial Deployment | Pending |
-| 1/29/2021 | Meet MVP Deliverables | Pending |
+| 1/25/2021 | Prompt/Wireframe | Complete |
+| 1/26/2021 | Approval/Begin Coding | Complete |
+| 1/27/2021 | Core App Structure | Complete |
+| 1/28/2021 | Initial Deployment | Complete |
+| 1/29/2021 | Meet MVP Deliverables | Complete |
 | 2/1/2021 | Presentations/Submission | Pending |
 
 Priority Matrix: [Link to Priority Matrix](https://drive.google.com/file/d/1h6b-Pgw7N-GC2XifGAZZEinY6ZF-N-Ef/view?usp=sharing)
@@ -49,7 +49,7 @@ Timeframes:
 | CSS Styling DESKTOP | H | 3 Hr | 3 Hr | TBD |
 | CSS Styling MOBILE | H | 3 Hr | 3 Hr | TBD |
 | POST MVP - External Links | L | 3 Hr | TBD | TBD |
-| Testing API call(s) | H | 3 Hr | TBD | TBD |
-| Testing CSS breakpoints | M | 2 Hr | TBD | TBD |
-| Hosting Final Product | M | 3 Hr | TBD | TBD |
-| Total Time | | 40 Hrs | | |
+| Testing API call(s) | H | 3 Hr | 2 Hr | TBD |
+| Testing CSS breakpoints | M | 2 Hr | 3 Hr | TBD |
+| Hosting Final Product | M | 3 Hr | 1 Hr | TBD |
+| Total Time | | 40 Hrs | 33.5 Hrs | |
