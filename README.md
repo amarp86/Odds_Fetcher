@@ -52,4 +52,4 @@ Timeframes:
 | Testing API call(s) | H | 3 Hr | 2 Hr | TBD |
 | Testing CSS breakpoints | M | 2 Hr | 3 Hr | TBD |
 | Hosting Final Product | M | 3 Hr | 1 Hr | TBD |
-| Total Time | | 40 Hrs | 33.5 Hrs | |
+| Total Time | | 40 Hrs | 29.5 Hrs | |
