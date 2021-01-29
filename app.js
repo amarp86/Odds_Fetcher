@@ -144,6 +144,7 @@ leagueButton.addEventListener('click',  async (e) => {
         
         
         let bestOddsTitle = document.createElement('p')
+        bestOddsTitle.setAttribute('id', 'best-title')
         bestOddsTitle.textContent = "Best Odds";
   
         awayMaxDiv.setAttribute('class', 'away-odds')
