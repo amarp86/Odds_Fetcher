@@ -55,6 +55,7 @@ button:hover {
   margin: 5px;
 }
 #legend {
+  color: white;
   text-align: center;
   padding: 5px;
 }
@@ -222,7 +223,7 @@ footer {
     margin: auto;
     margin-top: 3px;
     max-width: 30%;
-    background-color: #31337c;
+    background-color: hsl(238, 58%, 65%);
 
     padding: 3px 3px;
   }
