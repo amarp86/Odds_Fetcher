@@ -111,15 +111,17 @@ leagueButton.addEventListener('click',  async (e) => {
           bookNames.setAttribute('class', "booknames")
           bookNames.textContent = game.sites[i].site_nice;
           
-            //all available odds array to get min/max later
+            //push all available odds to array to get min/max later
           homeArray.push(game.sites[i].odds.h2h[0])
           awayArray.push(game.sites[i].odds.h2h[1]) 
-          siteArray.push(game.sites[i])
-          
+          siteArray.push(game.sites[i]) //push sportsbook name to array with matching index of odds in other arrays
+
+          //append all looped outputs to DOM
           appendDiv.append(bookNames)
           appendDiv.append(homeOdds)
           appendDiv.append(awayOdds)
-          if (game.sites[i].odds.h2h[2]) {
+
+          if (game.sites[i].odds.h2h[2]) { //if draw exists append draw info
             const drawOdds = document.createElement('div')
             drawOdds.setAttribute('class', "draw-odds")
             drawOdds.textContent = `Draw: ${game.sites[i].odds.h2h[2]}`
@@ -140,7 +142,7 @@ leagueButton.addEventListener('click',  async (e) => {
         const indexDrawMax = drawArray.indexOf(drawMax)
         //drawMin = Math.min(...drawArray)
         
-  
+          //create elements for best odds feature
         const homeMaxDiv = document.createElement('div')
         const awayMaxDiv = document.createElement('div')
         const homeSiteMaxDiv = document.createElement('div')
