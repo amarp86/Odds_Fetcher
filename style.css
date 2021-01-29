@@ -184,6 +184,9 @@ footer {
 #best-title {
   font-size: 30pt;
 }
+select {
+  border-radius: 50px;
+}
 
 @media screen and (max-width: 600px) {
   body {
