@@ -29,6 +29,7 @@ const getSportsOptions = (list) => {
 let leagueButton = document.querySelector("#button-league");
 leagueButton.addEventListener('click',  async (e) => {
   e.preventDefault();
+
   let value = document.querySelector("#league-list").value;
   let teamsData = await axios.get(`https://api.the-odds-api.com/v3/odds/?apiKey=69b790cf49d2c856f04114447b46335e&sport=${value}&region=us`)
   console.log(teamsData)
@@ -38,11 +39,16 @@ leagueButton.addEventListener('click',  async (e) => {
 
   let where = document.querySelector('#submit-team-form')
 
-  let createSelect = document.createElement("select")
-  createSelect.setAttribute('name', 'Team')
-  createSelect.setAttribute('id', "team-list")
-  where.append(createSelect)
+  while (where.lastChild) {           // prevents multiple selects and options from being created if user submits league again
+    where.removeChild(where.lastChild)
+  }
+  
 
+    let createSelect = document.createElement("select")
+    createSelect.setAttribute('name', 'Team')
+    createSelect.setAttribute('id', "team-list")
+    where.append(createSelect)
+  
   let createOption = document.createElement('option');
   createOption.textContent = "Now Select a Matchup";
   let teamOptionList = document.querySelector("#team-list")
@@ -140,8 +146,7 @@ leagueButton.addEventListener('click',  async (e) => {
         let homeSiteMaxDiv = document.createElement('div')
         let awaySiteMaxDiv = document.createElement('div')
         homeSiteMaxDiv.textContent = siteArray[indexHomeMax].site_nice;
-        awaySiteMaxDiv.textContent = siteArray[indexAwayMax].site_nice;
-        
+        awaySiteMaxDiv.textContent = siteArray[indexAwayMax].site_nice;        
         
         let bestOddsTitle = document.createElement('p')
         bestOddsTitle.setAttribute('id', 'best-title')
@@ -151,15 +156,14 @@ leagueButton.addEventListener('click',  async (e) => {
         awayMaxDiv.textContent = awayMax;
   
         homeMaxDiv.setAttribute('class', 'home-odds')
-        homeMaxDiv.textContent = homeMax;
-  
-        
+        homeMaxDiv.textContent = homeMax;        
   
         bestOddsDiv.append(bestOddsTitle) //bestoddsdiv location set above after intial if statement
         bestOddsDiv.append(homeMaxDiv)
         bestOddsDiv.append(`The Best Odds for ${game.teams[0]} Available at: ${homeSiteMaxDiv.textContent}`)
         bestOddsDiv.append(awayMaxDiv)
         bestOddsDiv.append(`The Best Odds for ${game.teams[1]} Available at: ${awaySiteMaxDiv.textContent}`)
+
         if (drawArray.length > 0) {
           let drawMaxDiv = document.createElement('div')
           let drawSiteMaxDiv = document.createElement('div')
@@ -168,13 +172,11 @@ leagueButton.addEventListener('click',  async (e) => {
           drawMaxDiv.textContent = drawMax;
           bestOddsDiv.append(drawMaxDiv)
           bestOddsDiv.append(`The Best Draw Odds Available at: ${drawSiteMaxDiv.textContent}`)
+           }        
+         }     
         }
-        
-      }
-     
-      }
       )
-    removeItems();
+        removeItems();
     
     }
   )
