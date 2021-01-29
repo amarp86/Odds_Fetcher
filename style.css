@@ -31,8 +31,11 @@ body {
 }
 
 button {
+  display: inherit;
   width: 150px;
   border-radius: 200px;
+  margin: 5px 5px;
+  padding: 3px 3px;
 }
 button:hover {
   background-color: darkslateblue;
@@ -133,9 +136,13 @@ button:hover {
 
 #team-list {
   width: 400px;
+  margin: 3px 3px;
+  padding: 3px 3px;
 }
 #league-list {
   width: 400px;
+  margin: 3px 3px;
+  padding: 3px 3px;
 }
 
 footer {
