@@ -3,9 +3,9 @@ const sportsUrl = `https://api.the-odds-api.com/v3/sports?apiKey=69b790cf49d2c85
 
 const getSports = async () => {
   try {
-    let sportsData = await axios.get(sportsUrl)
+    const sportsData = await axios.get(sportsUrl)
     
-    let sportsList = sportsData.data
+    const sportsList = sportsData.data
     
     getSportsOptions(sportsList)
     
@@ -16,9 +16,9 @@ const getSports = async () => {
 getSports();
 
 const getSportsOptions = (list) => {
-  let sportsOptions = document.querySelector('#league-list')
+  const sportsOptions = document.querySelector('#league-list')
   list.data.forEach(sport => {
-    let option = document.createElement('option')
+    const option = document.createElement('option')
     option.value = sport.key;
     option.textContent = sport.details;
     sportsOptions.append(option);
@@ -26,32 +26,32 @@ const getSportsOptions = (list) => {
 }
 
 
-let leagueButton = document.querySelector("#button-league");
+const leagueButton = document.querySelector("#button-league");
 leagueButton.addEventListener('click',  async (e) => {
   e.preventDefault();
 
-  let value = document.querySelector("#league-list").value;
-  let teamsData = await axios.get(`https://api.the-odds-api.com/v3/odds/?apiKey=69b790cf49d2c856f04114447b46335e&sport=${value}&region=us`)
+  const value = document.querySelector("#league-list").value;
+  const teamsData = await axios.get(`https://api.the-odds-api.com/v3/odds/?apiKey=69b790cf49d2c856f04114447b46335e&sport=${value}&region=us`)
   console.log(teamsData)
-  let teamsList = teamsData.data
+  const teamsList = teamsData.data
 
 // create second drop down after first action is performed
 
-  let where = document.querySelector('#submit-team-form')
+  const where = document.querySelector('#submit-team-form')
 
   while (where.lastChild) {           // prevents multiple selects and options from being created if user submits league again
     where.removeChild(where.lastChild)
   }
   
 
-    let createSelect = document.createElement("select")
+    const createSelect = document.createElement("select")
     createSelect.setAttribute('name', 'Team')
     createSelect.setAttribute('id', "team-list")
     where.append(createSelect)
   
-  let createOption = document.createElement('option');
+  const createOption = document.createElement('option');
   createOption.textContent = "Now Select a Matchup";
-  let teamOptionList = document.querySelector("#team-list")
+  const teamOptionList = document.querySelector("#team-list")
   teamOptionList.add(createOption);
   
 
@@ -63,51 +63,51 @@ leagueButton.addEventListener('click',  async (e) => {
 
   teamButton.addEventListener('click', async (e) => {
     e.preventDefault()
-    let value = document.querySelector('#league-list').value
-    let allData = await axios.get(`https://api.the-odds-api.com/v3/odds/?apiKey=69b790cf49d2c856f04114447b46335e&sport=${value}&region=us&oddsFormat=american&mkt=h2h`)
+    const value = document.querySelector('#league-list').value
+    const allData = await axios.get(`https://api.the-odds-api.com/v3/odds/?apiKey=69b790cf49d2c856f04114447b46335e&sport=${value}&region=us&oddsFormat=american&mkt=h2h`)
   
    
-    let getSelectedGameValue = document.querySelector("#team-list").value
-    let dataPoints = allData.data.data 
+    const getSelectedGameValue = document.querySelector("#team-list").value
+    const dataPoints = allData.data.data //prevent having to call redundant/nested data objects
   
     dataPoints.forEach(game => {    
   
       if (getSelectedGameValue === game.teams.toString()) {
-        let appendDiv = document.querySelector("#append-odds")
-        let bestOddsDiv = document.querySelector("#append-best-odds")
-        let teamsPlaying = document.createElement('h2')
-        let fixedTitle = game.teams.toString().split(",").join(" vs. ")
+        const appendDiv = document.querySelector("#append-odds")
+        const bestOddsDiv = document.querySelector("#append-best-odds")
+        const teamsPlaying = document.createElement('h2')
+        const fixedTitle = game.teams.toString().split(",").join(" vs. ")
         teamsPlaying.textContent = fixedTitle;
         teamsPlaying.setAttribute("class", "teams-playing")
         appendDiv.append(teamsPlaying)
         //let gameTime = game.commence_time;
         // => 1612740600
         
-        let homeArray = [];
-        let awayArray = [];
-        let drawArray = [];
-        let siteArray = [];
+        const homeArray = [];
+        const awayArray = [];
+        const drawArray = [];
+        const siteArray = [];
         let drawMax = 0;
         let homeMax = 0;
         let awayMax = 0;
-        let homeMin = 0;
-        let awayMin = 0;
+        // let homeMin = 0;
+        // let awayMin = 0;
   
-        let legend1 = document.querySelector("#legend-home");
+        const legend1 = document.querySelector("#legend-home");
         legend1.textContent = game.teams[0];
-        let legend2 = document.querySelector('#legend-away');
+        const legend2 = document.querySelector('#legend-away');
         legend2.textContent = game.teams[1];
   
   
         for (let i = 0; i < game.sites.length; i++) {
           
-          let homeOdds = document.createElement('div')
+          const homeOdds = document.createElement('div')
           homeOdds.setAttribute("class", "home-odds")
           homeOdds.textContent = `${game.teams[0]} : ${game.sites[i].odds.h2h[0]}`;
-          let awayOdds = document.createElement('div')
+          const awayOdds = document.createElement('div')
           awayOdds.setAttribute("class", "away-odds")
           awayOdds.textContent = `${game.teams[1]} : ${game.sites[i].odds.h2h[1]}`;
-          let bookNames = document.createElement('h3')
+          const bookNames = document.createElement('h3')
           bookNames.setAttribute('class', "booknames")
           bookNames.textContent = game.sites[i].site_nice;
           
@@ -120,7 +120,7 @@ leagueButton.addEventListener('click',  async (e) => {
           appendDiv.append(homeOdds)
           appendDiv.append(awayOdds)
           if (game.sites[i].odds.h2h[2]) {
-            let drawOdds = document.createElement('div')
+            const drawOdds = document.createElement('div')
             drawOdds.setAttribute('class', "draw-odds")
             drawOdds.textContent = `Draw: ${game.sites[i].odds.h2h[2]}`
             appendDiv.append(drawOdds)
@@ -129,26 +129,26 @@ leagueButton.addEventListener('click',  async (e) => {
         }
         //get min and max odds for home and away to append
         homeMax = Math.max(...homeArray)
-        let indexHomeMax = homeArray.indexOf(homeMax)
+        const indexHomeMax = homeArray.indexOf(homeMax)
         console.log(indexHomeMax)
 
         //homeMin = Math.min(...homeArray)
         awayMax = Math.max(...awayArray)
-        let indexAwayMax = awayArray.indexOf(awayMax)
+        const indexAwayMax = awayArray.indexOf(awayMax)
         //awayMin = Math.min(...awayArray)
         drawMax = Math.max(...drawArray)
-        let indexDrawMax = drawArray.indexOf(drawMax)
+        const indexDrawMax = drawArray.indexOf(drawMax)
         //drawMin = Math.min(...drawArray)
         
   
-        let homeMaxDiv = document.createElement('div')
-        let awayMaxDiv = document.createElement('div')
-        let homeSiteMaxDiv = document.createElement('div')
-        let awaySiteMaxDiv = document.createElement('div')
+        const homeMaxDiv = document.createElement('div')
+        const awayMaxDiv = document.createElement('div')
+        const homeSiteMaxDiv = document.createElement('div')
+        const awaySiteMaxDiv = document.createElement('div')
         homeSiteMaxDiv.textContent = siteArray[indexHomeMax].site_nice;
         awaySiteMaxDiv.textContent = siteArray[indexAwayMax].site_nice;        
         
-        let bestOddsTitle = document.createElement('p')
+        const bestOddsTitle = document.createElement('p')
         bestOddsTitle.setAttribute('id', 'best-title')
         bestOddsTitle.textContent = "Best Odds";
   
@@ -165,8 +165,8 @@ leagueButton.addEventListener('click',  async (e) => {
         bestOddsDiv.append(`The Best Odds for ${game.teams[1]} Available at: ${awaySiteMaxDiv.textContent}`)
 
         if (drawArray.length > 0) {
-          let drawMaxDiv = document.createElement('div')
-          let drawSiteMaxDiv = document.createElement('div')
+          const drawMaxDiv = document.createElement('div')
+          const drawSiteMaxDiv = document.createElement('div')
           drawSiteMaxDiv.textContent = siteArray[indexDrawMax].site_nice;
           drawMaxDiv.setAttribute('class', 'draw-odds')
           drawMaxDiv.textContent = drawMax;
@@ -189,10 +189,10 @@ leagueButton.addEventListener('click',  async (e) => {
 
 
 const getTeamsOptions = (list) => {
-  let teamsOptions = document.querySelector("#team-list")
+  const teamsOptions = document.querySelector("#team-list")
 
   list.data.forEach(team => {   
-    let option = document.createElement('option')
+    const option = document.createElement('option')
     option.value = team.teams
     
     option.textContent = team.teams.toString().split(",").join(" vs. ")
@@ -206,21 +206,21 @@ const getTeamsOptions = (list) => {
 //let teamButton = document.querySelector('#button-team')
 
 
-let removeButton = document.createElement('button')
+const removeButton = document.createElement('button')
 removeButton.setAttribute("id", "remove-button")
 removeButton.textContent = 'Reset/Remove'
   
 const removeItems = () => {  
-  let where = document.querySelector("#submit-team-form")
+  const where = document.querySelector("#submit-team-form")
   where.append(removeButton)  
 }
 
 removeButton.addEventListener('click', (e) => {
   e.preventDefault();
-  let where = document.querySelector("#append-odds")
-  let list1 = document.querySelector("#team-list")
-  let where2 = document.querySelector("#append-best-odds")
-  let where3 = document.querySelector('#submit-team-form')
+  const where = document.querySelector("#append-odds")
+  const list1 = document.querySelector("#team-list")
+  const where2 = document.querySelector("#append-best-odds")
+  const where3 = document.querySelector('#submit-team-form')
   while (where.lastChild) {
     where.removeChild(where.lastChild)
   }
@@ -238,9 +238,9 @@ removeButton.addEventListener('click', (e) => {
   // list1.add(defaultOption)
 
 
-  let legend1 = document.querySelector("#legend-home");
+  const legend1 = document.querySelector("#legend-home");
   legend1.textContent = "FIRST TEAM"
-  let legend2 = document.querySelector('#legend-away');
+  const legend2 = document.querySelector('#legend-away');
   legend2.textContent = "SECOND TEAM"
  
 }
