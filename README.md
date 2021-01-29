@@ -51,9 +51,9 @@ Timeframes:
 | POST MVP - Best Odds | L | 3 Hr | 3 Hr | 3 Hr |
 | UI/UX breakpoints | M | 3 Hr | 3 Hr | 3 Hr|
 | Testing API call(s) | H | 3 Hr | 2 Hr | 3 Hr |
-| Testing CSS breakpoints | M | 2 Hr | 3 Hr | 3 Hr |
+| Testing CSS breakpoints | M | 3 Hr | 3 Hr | 3 Hr |
 | Hosting Final Product | M | 3 Hr | 1 Hr | 3 Hr |
-| Total Time | | 43 Hrs | 36.5 | 36.5 Hr |
+| Total Time | | 44 Hrs | 36.5 | 36.5 Hr |
 
 Code Snippet:
 
