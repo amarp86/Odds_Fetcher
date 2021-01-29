@@ -55,10 +55,15 @@ button:hover {
   margin: 5px;
 }
 #legend {
+  display: flex;
+  flex-direction: column;
+  border: 5px solid black;
+  border-radius: 50px;
   color: white;
   text-align: center;
   padding: 5px;
 }
+
 #append-odds {
   display: flex;
   flex-direction: column;

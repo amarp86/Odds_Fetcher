@@ -231,9 +231,9 @@ removeButton.addEventListener('click', (e) => {
   while (where3.lastChild) {
     where3.removeChild(where3.lastChild)
   }
-  let defaultOption = document.createElement("option")
-  defaultOption.text = "Select League First"
-  list1.add(defaultOption)
+  // let defaultOption = document.createElement("option")
+  // defaultOption.text = "Select League First"
+  // list1.add(defaultOption)
 
 
   let legend1 = document.querySelector("#legend-home");
