@@ -1,5 +1,5 @@
 const sportsUrl = `https://api.the-odds-api.com/v3/sports?apiKey=69b790cf49d2c856f04114447b46335e`
-//const oddsUrl = `https://api.the-odds-api.com/v3/odds/?apiKey=*INSERT KEY*&sport=upcoming&region=us``
+//const oddsUrl = `https://api.the-odds-api.com/v3/odds/?apiKey=*INSERT_KEY*&sport=upcoming&region=us``
 
 const getSports = async () => {
   try {
@@ -73,7 +73,7 @@ teamButton.addEventListener('click', async (e) => {
       teamsPlaying.textContent = fixedTitle;
       teamsPlaying.setAttribute("class", "teams-playing")
       appendDiv.append(teamsPlaying)
-      let gameTime = game.commence_time;
+      //let gameTime = game.commence_time;
       // => 1612740600
       
       let homeArray = [];
@@ -102,14 +102,10 @@ teamButton.addEventListener('click', async (e) => {
         let bookNames = document.createElement('h3')
         bookNames.setAttribute('class', "booknames")
         bookNames.textContent = game.sites[i].site_nice;
-
         
           //all available odds array to get min/max later
         homeArray.push(game.sites[i].odds.h2h[0])
-        awayArray.push(game.sites[i].odds.h2h[1])
-        
-
-        
+        awayArray.push(game.sites[i].odds.h2h[1])        
         
         appendDiv.append(bookNames)
         appendDiv.append(homeOdds)
@@ -207,14 +203,14 @@ removeButton.addEventListener('click', (e) => {
 //teams button eventhandler returned object syntax below
 
 // console.log(game)
-    // console.log(game.teams.toString())
-    // console.log(game.home_team)
-    // console.log(game.sites)
-          
-        //console.log(game.sites[i].site_nice)
-        //console.log(`${game.teams[0]} : `  + game.sites[i].odds.h2h[0])
-        //console.log(`${game.teams[1]} : ` + game.sites[i].odds.h2h[1])   ***if h2h[2] exists there is a draw value***
-        // console.log(dataPoints)
+// console.log(game.teams.toString())
+// console.log(game.home_team)
+// console.log(game.sites)
+
+  //console.log(game.sites[i].site_nice)
+  //console.log(`${game.teams[0]} : `  + game.sites[i].odds.h2h[0])
+  //console.log(`${game.teams[1]} : ` + game.sites[i].odds.h2h[1])   ***if h2h[2] exists there is a draw value***
+  // console.log(dataPoints)
   // console.log(dataPoints[0].teams[0]) // first home team name
   // console.log(dataPoints[0].teams[1]) // first away team name
   // console.log(dataPoints[0].sites[0]) //first sportsbook in array's object of data.

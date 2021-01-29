@@ -53,3 +53,34 @@ Timeframes:
 | Testing CSS breakpoints | M | 2 Hr | 3 Hr | 3 Hr |
 | Hosting Final Product | M | 3 Hr | 1 Hr | 3 Hr |
 | Total Time | | 40 Hrs | 33.5 | 33.5 Hr |
+
+Code Snippet:
+
+````for (let i = 0; i < game.sites.length; i++) {
+
+        let homeOdds = document.createElement('div')
+        homeOdds.setAttribute("class", "home-odds")
+        homeOdds.textContent = `${game.teams[0]} : ${game.sites[i].odds.h2h[0]}`;
+        let awayOdds = document.createElement('div')
+        awayOdds.setAttribute("class", "away-odds")
+        awayOdds.textContent = `${game.teams[1]} : ${game.sites[i].odds.h2h[1]}`;
+        let bookNames = document.createElement('h3')
+        bookNames.setAttribute('class', "booknames")
+        bookNames.textContent = game.sites[i].site_nice;
+
+          //all available odds array to get min/max later
+        homeArray.push(game.sites[i].odds.h2h[0])
+        awayArray.push(game.sites[i].odds.h2h[1])
+
+        appendDiv.append(bookNames)
+        appendDiv.append(homeOdds)
+        appendDiv.append(awayOdds)
+        if (game.sites[i].odds.h2h[2]) {
+          let drawOdds = document.createElement('div')
+          drawOdds.setAttribute('class', "draw-odds")
+          drawOdds.textContent = `Draw: ${game.sites[i].odds.h2h[2]}`
+          appendDiv.append(drawOdds)
+          drawArray.push(game.sites[i].odds.h2h[2]) // if draw exists push value to array for later
+        }
+      }```
+````
