@@ -80,6 +80,7 @@ leagueButton.addEventListener('click',  async (e) => {
         let homeArray = [];
         let awayArray = [];
         let drawArray = [];
+        let siteArray = [];
         let drawMax = 0;
         let homeMax = 0;
         let awayMax = 0;
@@ -106,7 +107,8 @@ leagueButton.addEventListener('click',  async (e) => {
           
             //all available odds array to get min/max later
           homeArray.push(game.sites[i].odds.h2h[0])
-          awayArray.push(game.sites[i].odds.h2h[1])        
+          awayArray.push(game.sites[i].odds.h2h[1]) 
+          siteArray.push(game.sites[i])
           
           appendDiv.append(bookNames)
           appendDiv.append(homeOdds)
@@ -121,15 +123,24 @@ leagueButton.addEventListener('click',  async (e) => {
         }
         //get min and max odds for home and away to append
         homeMax = Math.max(...homeArray)
-        homeMin = Math.min(...homeArray)
+        let indexHomeMax = homeArray.indexOf(homeMax)
+        console.log(indexHomeMax)
+
+        //homeMin = Math.min(...homeArray)
         awayMax = Math.max(...awayArray)
-        awayMin = Math.min(...awayArray)
+        let indexAwayMax = awayArray.indexOf(awayMax)
+        //awayMin = Math.min(...awayArray)
         drawMax = Math.max(...drawArray)
-        drawMin = Math.min(...drawArray)
+        let indexDrawMax = drawArray.indexOf(drawMax)
+        //drawMin = Math.min(...drawArray)
         
   
         let homeMaxDiv = document.createElement('div')
         let awayMaxDiv = document.createElement('div')
+        let homeSiteMaxDiv = document.createElement('div')
+        let awaySiteMaxDiv = document.createElement('div')
+        homeSiteMaxDiv.textContent = siteArray[indexHomeMax].site_nice;
+        awaySiteMaxDiv.textContent = siteArray[indexAwayMax].site_nice;
         
         
         let bestOddsTitle = document.createElement('p')
@@ -145,12 +156,17 @@ leagueButton.addEventListener('click',  async (e) => {
   
         bestOddsDiv.append(bestOddsTitle) //bestoddsdiv location set above after intial if statement
         bestOddsDiv.append(homeMaxDiv)
+        bestOddsDiv.append(`The Best Odds for ${game.teams[0]} Available at: ${homeSiteMaxDiv.textContent}`)
         bestOddsDiv.append(awayMaxDiv)
+        bestOddsDiv.append(`The Best Odds for ${game.teams[1]} Available at: ${awaySiteMaxDiv.textContent}`)
         if (drawArray.length > 0) {
           let drawMaxDiv = document.createElement('div')
+          let drawSiteMaxDiv = document.createElement('div')
+          drawSiteMaxDiv.textContent = siteArray[indexDrawMax].site_nice;
           drawMaxDiv.setAttribute('class', 'draw-odds')
           drawMaxDiv.textContent = drawMax;
           bestOddsDiv.append(drawMaxDiv)
+          bestOddsDiv.append(`The Best Draw Odds Available at: ${drawSiteMaxDiv.textContent}`)
         }
         
       }

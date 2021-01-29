@@ -75,7 +75,7 @@ Code Snippet:
         appendDiv.append(bookNames)
         appendDiv.append(homeOdds)
         appendDiv.append(awayOdds)
-        if (game.sites[i].odds.h2h[2]) {
+        if (game.sites[i].odds.h2h[2]) {    //checks object arrays for a 3rd index value for draw option
           let drawOdds = document.createElement('div')
           drawOdds.setAttribute('class', "draw-odds")
           drawOdds.textContent = `Draw: ${game.sites[i].odds.h2h[2]}`
@@ -83,4 +83,6 @@ Code Snippet:
           drawArray.push(game.sites[i].odds.h2h[2]) // if draw exists push value to array for later
         }
       }```
+
+
 ````
