@@ -218,13 +218,13 @@ removeButton.addEventListener('click', (e) => {
   legend1.textContent = "FIRST TEAM"
   const legend2 = document.querySelector('#legend-away');
   legend2.textContent = "SECOND TEAM"
-  //alert("If You Or Someone You Know Has A Gambling Problem Call 1-800-Gambler") optional disclaimer alert per reset
+  // alert("If You Or Someone You Know Has A Gambling Problem Call 1-800-Gambler") // optional disclaimer alert per reset
   }
 )
 
 
 
-//Syntax for navigating retured JSON data
+//Syntax for navigating returned JSON data
 
 // console.log(game)
 // console.log(game.teams.toString())
