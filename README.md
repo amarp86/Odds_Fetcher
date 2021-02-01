@@ -12,15 +12,20 @@ MVP:
 
 1. Establish Connection to API with axios
 2. Allow User to select a sports league (NBA, NCAAB, NFL, etc..)
-3. Allow user to select a matchup within selected league (NY Knicks, Penn State Nittany Lions, Kansas City Chiefs, etc)
-4. Append DOM to display current realtime bettings odds and other necessary game data to make informed wager.
+3. Allow user to select a matchup within selected league (NY Knicks vs Dallas Mavericks, Penn State Nittany Lions vs Ohio State Buckeyes, Kansas City Chiefs vs Tampa Bay Buccaneers, etc)
+4. Append DOM to display current realtime bettings odds at available US sportsbooks.
 5. Manipulate DOM with CSS to display information in a presentable manner.
 
 Post-MVP:
 
 1. Append DOM to link externally to sportsbooks allowing wagers on current matchup that are within API
 2. Make second API call to fetch previous results based on odds and display "previous outcomes"
-3. Use JS to find sportsbook with BEST ODDS for selected Match-Up
+3. Use JS to find sportsbook with BEST ODDS for selected Match-Up and append to DOM.
+
+Changelog:
+
+1. API paywall restricts #1 and #2 of post MVP goals - feature can be updated when API is changed to paid version.
+2. Due to API restrictions, instead of selecting an individual team, users must select a matchup between 2 teams.
 
 Schedule and Goals:
 | Date | Goal of the Day | Status |

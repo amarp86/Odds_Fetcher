@@ -1,21 +1,18 @@
 const sportsUrl = `https://api.the-odds-api.com/v3/sports?apiKey=69b790cf49d2c856f04114447b46335e`
 //const oddsUrl = `https://api.the-odds-api.com/v3/odds/?apiKey=*INSERT_KEY*&sport=upcoming&region=us``
 
-const getSports = async () => {
+const getSports = async () => {  //making initial call to get list of worldwide sports available for odds fetch
   try {
-    const sportsData = await axios.get(sportsUrl)
-    
-    const sportsList = sportsData.data
-    
-    getSportsOptions(sportsList)
-    
+    const sportsData = await axios.get(sportsUrl)    
+    const sportsList = sportsData.data    
+    getSportsOptions(sportsList)    
   } catch (error) {
     console.log(error)
   }
 }
 getSports();
 
-const getSportsOptions = (list) => {
+const getSportsOptions = (list) => { //appending list of available sports leagues to initial select element
   const sportsOptions = document.querySelector('#league-list')
   list.data.forEach(sport => {
     const option = document.createElement('option')
@@ -25,14 +22,12 @@ const getSportsOptions = (list) => {
   })
 }
 
-
-const leagueButton = document.querySelector("#button-league");
+const leagueButton = document.querySelector("#button-league"); //  add event handler to league submit button to fire off rest of program
 leagueButton.addEventListener('click',  async (e) => {
   e.preventDefault();
 
   const value = document.querySelector("#league-list").value;
   const teamsData = await axios.get(`https://api.the-odds-api.com/v3/odds/?apiKey=69b790cf49d2c856f04114447b46335e&sport=${value}&region=us`)
-  //console.log(teamsData)
   const teamsList = teamsData.data
 
 // create second drop down after first action is performed
@@ -41,8 +36,7 @@ leagueButton.addEventListener('click',  async (e) => {
 
   while (where.lastChild) {           // prevents multiple selects and options from being created if user submits league again
     where.removeChild(where.lastChild)
-  }
-  
+  }  
 
     const createSelect = document.createElement("select")
     createSelect.setAttribute('name', 'Team')
@@ -58,7 +52,6 @@ leagueButton.addEventListener('click',  async (e) => {
   const teamButton = document.createElement('button');
   teamButton.textContent = "Submit Matchup"
   teamButton.setAttribute('id','button-team')
-  //teamButton.setAttribute('class', 'button')
   where.append(teamButton)
 
   teamButton.addEventListener('click', async (e) => {
@@ -79,9 +72,7 @@ leagueButton.addEventListener('click',  async (e) => {
         const fixedTitle = game.teams.toString().split(",").join(" vs. ")
         teamsPlaying.textContent = fixedTitle;
         teamsPlaying.setAttribute("class", "teams-playing")
-        appendDiv.append(teamsPlaying)
-        //let gameTime = game.commence_time;
-        // => 1612740600
+        appendDiv.append(teamsPlaying)    
         
         const homeArray = [];
         const awayArray = [];
@@ -89,9 +80,7 @@ leagueButton.addEventListener('click',  async (e) => {
         const siteArray = [];
         let drawMax = 0;
         let homeMax = 0;
-        let awayMax = 0;
-        // let homeMin = 0;
-        // let awayMin = 0;
+        let awayMax = 0;     
   
         const legend1 = document.querySelector("#legend-home");
         legend1.textContent = game.teams[0];
@@ -131,16 +120,17 @@ leagueButton.addEventListener('click',  async (e) => {
         }
         //get min and max odds for home and away to append
         homeMax = Math.max(...homeArray)
-        const indexHomeMax = homeArray.indexOf(homeMax)
-        //console.log(indexHomeMax)
-
-        //homeMin = Math.min(...homeArray)
+        const indexHomeMax = homeArray.indexOf(homeMax)        
+        
         awayMax = Math.max(...awayArray)
         const indexAwayMax = awayArray.indexOf(awayMax)
-        //awayMin = Math.min(...awayArray)
+        
         drawMax = Math.max(...drawArray)
         const indexDrawMax = drawArray.indexOf(drawMax)
-        //drawMin = Math.min(...drawArray)
+
+        //homeMin = Math.min(...homeArray)  // get worst odds for future feature
+        //awayMin = Math.min(...awayArray) // get worst odds for future feature
+        //drawMin = Math.min(...drawArray) // get worst odds for future feature
         
           //create elements for best odds feature
         const homeMaxDiv = document.createElement('div')
@@ -178,35 +168,23 @@ leagueButton.addEventListener('click',  async (e) => {
          }     
         }
       )
-        removeItems();
-    
+        removeItems(); // append remove-reset button    
     }
-  )
-
-  
-  getTeamsOptions(teamsList)
-  
-  
+  )  
+  getTeamsOptions(teamsList)  
 })
 
 
-const getTeamsOptions = (list) => {
+const getTeamsOptions = (list) => { //populate matchup list based on league selection
   const teamsOptions = document.querySelector("#team-list")
 
   list.data.forEach(team => {   
     const option = document.createElement('option')
-    option.value = team.teams
-    
-    option.textContent = team.teams.toString().split(",").join(" vs. ")
-   
+    option.value = team.teams    
+    option.textContent = team.teams.toString().split(",").join(" vs. ")   
     teamsOptions.append(option)
   })
 }
-
-
-
-//let teamButton = document.querySelector('#button-team')
-
 
 const removeButton = document.createElement('button')
 removeButton.setAttribute("id", "remove-button")
@@ -235,23 +213,18 @@ removeButton.addEventListener('click', (e) => {
   while (where3.lastChild) {
     where3.removeChild(where3.lastChild)
   }
-  // let defaultOption = document.createElement("option")
-  // defaultOption.text = "Select League First"
-  // list1.add(defaultOption)
-
-
+ // reset LEGEND to default values on a RESET CLICK
   const legend1 = document.querySelector("#legend-home");
   legend1.textContent = "FIRST TEAM"
   const legend2 = document.querySelector('#legend-away');
   legend2.textContent = "SECOND TEAM"
- 
-}
-
+  //alert("If You Or Someone You Know Has A Gambling Problem Call 1-800-Gambler") optional disclaimer alert per reset
+  }
 )
 
 
 
-//teams button eventhandler returned object syntax below
+//Syntax for navigating retured JSON data
 
 // console.log(game)
 // console.log(game.teams.toString())
