@@ -32,7 +32,7 @@ leagueButton.addEventListener('click',  async (e) => {
 
   const value = document.querySelector("#league-list").value;
   const teamsData = await axios.get(`https://api.the-odds-api.com/v3/odds/?apiKey=69b790cf49d2c856f04114447b46335e&sport=${value}&region=us`)
-  console.log(teamsData)
+  //console.log(teamsData)
   const teamsList = teamsData.data
 
 // create second drop down after first action is performed
@@ -132,7 +132,7 @@ leagueButton.addEventListener('click',  async (e) => {
         //get min and max odds for home and away to append
         homeMax = Math.max(...homeArray)
         const indexHomeMax = homeArray.indexOf(homeMax)
-        console.log(indexHomeMax)
+        //console.log(indexHomeMax)
 
         //homeMin = Math.min(...homeArray)
         awayMax = Math.max(...awayArray)
